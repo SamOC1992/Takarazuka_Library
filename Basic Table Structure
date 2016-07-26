@@ -1,0 +1,146 @@
+CREATE database Takarazuka_Library;
+USE Takarazuka_Library;
+
+CREATE TABLE 01_Hanagumi (
+-> Show_ID varchar(50) not null PK #primary key -> Folder_ID_year_letter, yakukawari casting gets OWN Show_ID
+-> Folder_ID varchar(20) not null
+-> TROUPE varchar(20)
+-> YEAR int(10)
+-> Owned varchar(20) enum('yes', 'partially', 'no')
+-> SHOW_Name_01 varchar(50)
+-> SHOW_Name_02 varchar(50)
+-> SHOW_Name_03 varchar(50)
+-> SHOW_Name_04 varchar(50)
+-> SHOW_Name_05 varchar(50)
+-> SHOW_Name_06 varchar(50)
+-> SHOW_Name_07 varchar(50)
+-> Otokoyaku_top varchar(50)
+-> Musumeyaku_top varchar(50)
+-> Venue varchar(50)
+-> Hatsubutai_year int(10)
+-> Episode_Number int(10)
+-> DVD/BRD(rip) enum('yes', 'no')
+-> Notes varchar(500)
+-> );
+
+CREATE TABLE 02_Tsukigumi (
+-> Show_ID varchar(50) not null PK #primary key -> Folder_ID_year_letter, yakukawari casting gets OWN Show_ID
+-> Folder_ID varchar(20) not null
+-> TROUPE varchar(20)
+-> YEAR int(10)
+-> Owned varchar(20) enum('yes', 'partially', 'no')
+-> SHOW_Name_01 varchar(50)
+-> SHOW_Name_02 varchar(50)
+-> SHOW_Name_03 varchar(50)
+-> SHOW_Name_04 varchar(50)
+-> SHOW_Name_05 varchar(50)
+-> SHOW_Name_06 varchar(50)
+-> SHOW_Name_07 varchar(50)
+-> Otokoyaku_top varchar(50)
+-> Musumeyaku_top varchar(50)
+-> Venue varchar(50)
+-> Hatsubutai_year int(10)
+-> Episode_Number int(10)
+-> DVD/BRD(rip) enum('yes', 'no')
+-> Notes varchar(500)
+-> );
+
+CREATE TABLE 03_Yukigumi (
+-> Show_ID varchar(50) not null PK #primary key -> Folder_ID_year_letter, yakukawari casting gets OWN Show_ID
+-> Folder_ID varchar(20) not null
+-> TROUPE varchar(20)
+-> YEAR int(10)
+-> Owned varchar(20) enum('yes', 'partially', 'no')
+-> SHOW_Name_01 varchar(50)
+-> SHOW_Name_02 varchar(50)
+-> SHOW_Name_03 varchar(50)
+-> SHOW_Name_04 varchar(50)
+-> SHOW_Name_05 varchar(50)
+-> SHOW_Name_06 varchar(50)
+-> SHOW_Name_07 varchar(50)
+-> Otokoyaku_top varchar(50)
+-> Musumeyaku_top varchar(50)
+-> Venue varchar(50)
+-> Hatsubutai_year int(10)
+-> Episode_Number int(10)
+-> DVD/BRD(rip) enum('yes', 'no')
+-> Notes varchar(500)
+-> );
+
+CREATE TABLE 04_Hoshigumi (
+-> Show_ID varchar(50) not null PK #primary key -> Folder_ID_year_letter, yakukawari casting gets OWN Show_ID
+-> Folder_ID varchar(20) not null
+-> TROUPE varchar(20)
+-> YEAR int(10)
+-> Owned varchar(20) enum('yes', 'partially', 'no')
+-> SHOW_Name_01 varchar(50)
+-> SHOW_Name_02 varchar(50)
+-> SHOW_Name_03 varchar(50)
+-> SHOW_Name_04 varchar(50)
+-> SHOW_Name_05 varchar(50)
+-> SHOW_Name_06 varchar(50)
+-> SHOW_Name_07 varchar(50)
+-> Otokoyaku_top varchar(50)
+-> Musumeyaku_top varchar(50)
+-> Venue varchar(50)
+-> Hatsubutai_year int(10)
+-> Episode_Number int(10)
+-> DVD/BRD(rip) enum('yes', 'no')
+-> Notes varchar(500)
+-> );
+
+CREATE TABLE 05_Soragumi (
+-> Show_ID varchar(50) not null PK #primary key -> Folder_ID_year_letter, yakukawari casting gets OWN Show_ID
+-> Folder_ID varchar(20) not null
+-> TROUPE varchar(20)
+-> YEAR int(10)
+-> Owned varchar(20) enum('yes', 'partially', 'no')
+-> SHOW_Name_01 varchar(50)
+-> SHOW_Name_02 varchar(50)
+-> SHOW_Name_03 varchar(50)
+-> SHOW_Name_04 varchar(50)
+-> SHOW_Name_05 varchar(50)
+-> SHOW_Name_06 varchar(50)
+-> SHOW_Name_07 varchar(50)
+-> Otokoyaku_top varchar(50)
+-> Musumeyaku_top varchar(50)
+-> Venue varchar(50)
+-> Hatsubutai_year int(10)
+-> Episode_Number int(10)
+-> DVD/BRD(rip) enum('yes', 'no')
+-> Notes varchar(500)
+-> );
+
+CREATE TABLE 06_All_Troupe_OG (
+-> Show_ID varchar(50) not null PK #primary key -> Folder_ID_year_letter, yakukawari casting gets OWN Show_ID
+-> Folder_ID varchar(20) not null
+-> TROUPE varchar(20)
+-> YEAR int(10)
+-> Owned varchar(20) enum('yes', 'partially', 'no')
+-> SHOW_Name_01 varchar(50)
+-> SHOW_Name_02 varchar(50)
+-> SHOW_Name_03 varchar(50)
+-> SHOW_Name_04 varchar(50)
+-> SHOW_Name_05 varchar(50)
+-> SHOW_Name_06 varchar(50)
+-> SHOW_Name_07 varchar(50)
+-> Otokoyaku_top varchar(50)
+-> Musumeyaku_top varchar(50)
+-> Venue varchar(50)
+-> Hatsubutai_year int(10)
+-> Episode_Number int(10)
+-> DVD/BRD(rip) enum('yes', 'no')
+-> Notes varchar(500)
+-> );
+
+CREATE TABLE Owned_Quality (
+-> Show_Quality_ID varchar(50) not null PK #primary key -> Folder_ID_year_letter_[01/02/03/04/05/06/07]
+-> Show_ID varchar(50) not null
+-> TROUPE varchar(20)
+-> YEAR
+-> SHOW_Name varchar(50)
+-> Quality varchar(20) enum('00016x0016', '00032x0023', '00040x0030', '00042x0011', '00042x0032', '00048x0032', '00060x0040', '00064x0064', '00072x0064', '00075x0064', '00084x0048', '00096x0064', '00096x0065', '00096x0096', '00102x0064', '00120x0090', '00128x0036', '00128x0048', '00128x0096', '00128x0128', '00140x0192', '00144x0168', '00150x0040', '00160x0102', '00160x0120', '00160x0144', '00160x0152', '00160x0160', '00160x0200', '00160x0256', '00176x0144', '00208x0176', '00208x0208', '00220x0176', '00224x0144', '00240x0064', '00240x0160', '00240x0240', '00256x0192', '00256x0256', '00272x0340', '00280x0192', '00310x0576', '00312x0390', '00320x0192', '00320x0200', '00320x0208', '00320x0224', '00320x0240', '00320x0256', '00320x0320', '00320x0480', '00352x0240', '00352x0288', '00352x0480', '00352x0576', '00370x0576', '00376x0240', '00380x0480', '00384x0288', '00400x0240', '00400x0270', '00400x0300', '00416x0352', '00432x0128', '00432x0240', '00440x0480', '00480x0234', '00480x0250', '00480x0272', '00480x0320', '00480x0480', '00480x0500', '00480x0576', '00512x0256', '00512x0342', '00512x0384', '00520x0432', '00520x0576', '00530x0480', '00544x0576', '00560x0192', '00570x0576', '00580x0480', '00600x0480', '00640x0200', '00640x0240', '00640x0256', '00640x0320', '00640x0350', '00640x0360', '00640x0400', '00640x0480', '00640x0512', '00704x0480', '00704x0576', '00720x0348', '00720x0350', '00720x0364', '00720x0480', '00720x0486', '00720x0576', '00768x0480', '00768x0576', '00800x0240', '00800x0352', '00800x0480', '00800x0600', '00832x0624', '00848x0480', '00852x0480', '00854x0480', '00960x0540', '00960x0544', '00960x0640', '00960x0720', '01024x0576', '01024x0600', '01024x0640', '01024x0768', '01024x0800', '01024x1024', '01080x1200', '01120x0832', '01136x0640', '01152x0720', '01152x0768', '01152x0864', '01152x0900', '01280x0720', '01280x0768', '01280x0800', '01280x0854', '01280x0960', '01280x1024', '01280x1080', '01334x0750', '01366x0768', '01400x1050', '01408x1152' '01440x0900', '01440x0960', '01440x1024', '01440x1080', '01600x0768', '01600x0900', '01600x1024', '01600x1200', '01600x1280', '01680x1050', '01776x1000', '01792x1344', '01800x1440', '01828x1332', '01856x1392', '01920x1080', '01920x1200', '01920x1280', '01920x1400', '01920x1440', '01998x1080', '02048x0858', '02048x1152', '02048x1280', '02048x1536', '02048x1556', '02160x1440', '02304x1440', '02304x1728', '02538x1080', '02560x1080', '02560x1440', '02560x1600', '02560x1700', '02560x1800', '02560x1920', '02560x2048', '02732x2048', '02736x1824', '02800x2100', '02880x0900', '02880x1800', '03000x2000', '03200x1800', '03200x2048', '03200x2400', '03440x1440', '03656x2664', '03840x2160', '03840x2400', '03996x2160', '04096x1714', '04096x2160', '04096x2304', '04096x3072', '04096x3112', '05120x2160', '05120x2880', '05120x3200', '05120x4096', '05616x4096', '06144x3160', '06400x4096', '06400x4800', '07680x4320', '07680x4800', '08192x4608', '08192x8192', '28000x9334')
+-> Episode_Number int(10)
+-> DVD/BRD(rip) enum('yes', 'no')
+-> Notes varchar(500)
+-> );
